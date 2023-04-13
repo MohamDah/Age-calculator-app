@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+$Purple: hsl(259, 100%, 65%);
+$Lightred: hsl(0, 100%, 67%);
+$White: hsl(0, 0%, 100%);
+$Offwhite: hsl(0, 0%, 94%);
+$Lightgrey: hsl(0, 0%, 86%);
+$Smokeygrey: hsl(0, 1%, 44%);
+$Offblack: hsl(0, 0%, 8%);
+
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-color: $Offwhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    #main {
+        background-color: $White;
+        max-width: 900px;
+        width: 90%;
+        height: 600px;
+        padding: 40px;
+        border-radius: 20px 20px 30% 20px;
+
+        form {
+            height: 145px;
+            border-bottom: 1px solid $Lightgrey;
+            position: relative;
+            display: flex;
+            gap: 20px;
+            
+            label{
+                display: inline-block;
+                padding-bottom: 0;
+                max-width: 150px;
+                width: 33%;
+
+                p:not(.alert){
+                    margin:0;
+                    color: $Smokeygrey;
+                    font-size: 12px;
+                    letter-spacing: 3px;
+                    line-height: 2rem;
+                }
+                p.error {
+                    color: $Lightred;
+                }
+                input {
+                    width: 100%;
+                    height: 50px;
+                    padding: 15px;
+                    font-size: 32px;
+                    font-weight: 700;
+                    border: 1px solid $Lightgrey;
+                    border-radius: 10px;
+                    
+                }
+                input.error {
+                    border-color: $Lightred;
+                }
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+                }
+                input:focus {
+                    border: 1px solid $Purple;
+                    outline: none;
+                }
+                p.alert{
+                    color: $Lightred;
+                    font-size: 0.8em;
+                    font-weight: 400;
+                    font-style: italic;
+                }
+            }
+            button {
+                display: block;
+                height: 90px;
+                width: 90px;
+                background-color: $Purple;
+                border: none;
+                border-radius: 50%;                   
+                position: absolute;
+                right: 0;
+                bottom: -45px;
+                transition: background-color 0.1s linear;
+            }
+            button:hover {
+                cursor: pointer;
+                background-color: $Offblack;
+            }
+        }
+        
+        #date {
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            p {
+                margin: 0;
+                font-size: 6rem;
+                font-weight: 800;
+                font-style: italic;
+                line-height: 100px;
+                
+                span {
+                    color: $Purple
+                }
+            }
+            
+        }
+
+        @media (max-width: 650px) {
+            
+            form{ 
+                label{
+                    input{
+                        font-size: 16px;
+                    }
+                    p.alert {
+                        margin-top: 0.1em;
+                        font-size: 0.7em;
+                        line-height: 1em;
+                    }
+                }
+                button {
+                    right: 34%;
+                    transform: scale(0.7);
+                }
+            }
+            #date{
+                p{
+                    font-size: 3.0rem;
+                    line-height:75px
+                }
+            }
+        }
+    }
+}
