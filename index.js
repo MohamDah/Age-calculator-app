@@ -9,7 +9,7 @@ function date() {
     if (year == "") {
         isYear = "This field is required";
         error(form.querySelector('#yearlab'), isYear);
-    } else if (year > today.getFullYear()) {
+    } else if (year >= today.getFullYear()) {
         isYear = "Must be in the past";
         error(form.querySelector('#yearlab'), isYear)
     } else {
