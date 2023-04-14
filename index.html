@@ -8,18 +8,14 @@
   
   <title>Frontend Mentor | Age calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+ 
 
   <link rel="stylesheet" href="./styles.css">
   <script src="./index.js"></script>
 </head>
 <body>
 
-  <div id="main">
+  <main class="main">
     <form onsubmit="return date()">
       <label id="daylab"><p>DAY</p>
         <input id="day" type="number" placeholder="DD">
@@ -42,11 +38,11 @@
       <p><span id="months">--</span>months</p>
       <p><span id="days">--</span>days</p>
     </div>
-  </div>
+  </main>
   
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">MohamDah</a>.
-  </div>
+  </footer>
 </body>
 </html>

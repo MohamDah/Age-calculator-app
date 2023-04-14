@@ -3,76 +3,80 @@
   box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
 body {
   width: 100vw;
-  height: 100vh;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
   background-color: hsl(0, 0%, 94%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
-body #main {
+body main.main {
   background-color: hsl(0, 0%, 100%);
-  max-width: 900px;
+  max-width: 850px;
   width: 90%;
-  height: 600px;
+  height: 700px;
   padding: 40px;
   border-radius: 20px 20px 30% 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-body #main form {
+body main.main form {
   height: 145px;
   border-bottom: 1px solid hsl(0, 0%, 86%);
   position: relative;
   display: flex;
   gap: 20px;
 }
-body #main form label {
+body main.main form label {
   display: inline-block;
   padding-bottom: 0;
-  max-width: 150px;
+  max-width: 175px;
   width: 33%;
 }
-body #main form label p:not(.alert) {
+body main.main form label p:not(.alert) {
   margin: 0;
   color: hsl(0, 1%, 44%);
   font-size: 12px;
   letter-spacing: 3px;
   line-height: 2rem;
 }
-body #main form label p.error {
+body main.main form label p.error {
   color: hsl(0, 100%, 67%);
 }
-body #main form label input {
+body main.main form label input {
   width: 100%;
-  height: 50px;
+  height: 75px;
   padding: 15px;
   font-size: 32px;
   font-weight: 700;
   border: 1px solid hsl(0, 0%, 86%);
   border-radius: 10px;
 }
-body #main form label input.error {
+body main.main form label input.error {
   border-color: hsl(0, 100%, 67%);
 }
-body #main form label input::-webkit-outer-spin-button,
-body #main form label input::-webkit-inner-spin-button {
+body main.main form label input::-webkit-outer-spin-button,
+body main.main form label input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-body #main form label input:focus {
+body main.main form label input:focus {
   border: 1px solid hsl(259, 100%, 65%);
   outline: none;
 }
-body #main form label p.alert {
+body main.main form label p.alert {
   color: hsl(0, 100%, 67%);
   font-size: 0.8em;
   font-weight: 400;
   font-style: italic;
 }
-body #main form button {
+body main.main form button {
   display: block;
   height: 90px;
   width: 90px;
@@ -84,43 +88,67 @@ body #main form button {
   bottom: -45px;
   transition: background-color 0.1s linear;
 }
-body #main form button:hover {
+body main.main form button:hover {
   cursor: pointer;
   background-color: hsl(0, 0%, 8%);
 }
-body #main #date {
-  height: 400px;
+body main.main #date {
+  height: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-body #main #date p {
+body main.main #date p {
   margin: 0;
   font-size: 6rem;
   font-weight: 800;
   font-style: italic;
   line-height: 100px;
 }
-body #main #date p span {
+body main.main #date p span {
   color: hsl(259, 100%, 65%);
 }
-@media (max-width: 650px) {
-  body #main form label input {
-    font-size: 16px;
+@media (max-width: 800px) {
+  body main.main {
+    height: 450px;
+    top: 40%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
-  body #main form label p.alert {
+  body main.main form {
+    height: 40%;
+  }
+  body main.main form label input {
+    font-size: 16px;
+    height: 50px;
+  }
+  body main.main form label p.alert {
     margin-top: 0.1em;
     font-size: 0.7em;
     line-height: 1em;
   }
-  body #main form button {
-    right: 34%;
-    transform: scale(0.7);
+  body main.main form button {
+    right: 50%;
+    transform: scale(0.7) translate(50%, 0);
   }
-  body #main #date p {
+  body main.main #date {
+    align-items: baseline;
+  }
+  body main.main #date p {
+    width: 100%;
     font-size: 3rem;
-    line-height: 75px;
+    line-height: 55px;
   }
+}
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+body .attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 /*# sourceMappingURL=styles.css.map */
