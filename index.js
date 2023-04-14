@@ -53,7 +53,7 @@ function date() {
 
     if (isYear==true && isMonth==true && isDay == true) {
 
-        const birthDate = new Date(`${month}/${day}/${year}`);
+        const birthDate = new Date(year, month, day);
         const age = getAge(today, birthDate);
         document.querySelector('#years').innerHTML = age[0] + " ";
         document.querySelector('#months').innerHTML = age[1] + " ";
